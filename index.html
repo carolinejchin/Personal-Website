@@ -1,1 +1,303 @@
-"Hello World" 
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Webpage</title>
+
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Home -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-text">
+                <h1>Caroline Chin</h1>
+                <h2>Welcome to my personal website!</h2>
+
+                <div class="buttons">
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/carolinejchin" class="button github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+            
+                    <!-- LinkedIn Button -->
+                    <a href="https://www.linkedin.com/in/caroline-chin-7752011a3/" class="button linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+            
+                    <!-- Email Button -->
+                    <a href="mailto:carolinejennachin@gmail.com" class="button email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<section id="about" class="about">
+    <div class="about-text">
+        <h1>About Me</h1>
+    </div>
+        
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <div class="mySlides">
+        <img src="carousel1" style="width:40%">
+    </div>
+
+    <div class="mySlides">
+        <img src="carousel2.webp" style="width:40%">
+    </div>
+
+    <div class="mySlides">
+        <img src="carousel3.webp" style="width:40%">
+    </div>
+
+    <div class="mySlides">
+        <img src="carousel4.webp" style="width:40%">
+    </div>
+
+    <div class="mySlides">
+        <img src="carousel5.webp" style="width:40%">
+    </div>
+
+    <div class="mySlides">
+        <img src="carousel6.webp" style="width:40%">
+    </div>
+
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let captionText = document.getElementById("caption");
+    
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+    
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+    
+            slides[slideIndex-1].style.display = "block";
+            captionText.innerHTML = "Image " + slideIndex + " of 5";
+        }
+    </script>
+        <div class="about-text">
+            <h2>I recently graduated from Tufts University with a degree in Computer Science and a minor in Engineering Management.
+                I'm passionate about software engineering, with a focus on front-end and full-stack development, as well as cybersecurity and emerging technologies. 
+                From my first full-time role I am excited about growing as a programmer and learning as much as I can.
+                In my free time I enjoy playing squash, spikeball, running, mountain biking, and gaming.
+                I'm always open to connecting, so feel free to reach out!
+            </h2>
+        </div>
+        </section>
+
+        <section id="education" class = "education">
+            <div class="education-text">
+                <h1>
+                    Education
+                </h1>
+                <div class="education-container">
+                    <div class="schools">
+                        <div class="college">
+                            <!-- <img src="tufts-logo" style="width: 98%"> -->
+                            <h2>Tufts University</h2>
+                            <h3>Bachelor of Science (2020-2024)</h3>
+                            <h3>Major in Computer Science</h3>
+                            <h3>Minor in Engineering Management</h3>
+                        </div>
+
+                        <div class="highschool">
+                            <h2>The Bronx High School of Science</h2>
+                            <h3>High School (2016-2020)</h3>
+                        </div>
+                    </div>
+                    <div class="coursework-skills">
+                        <div class="coursework">
+                            <h2>Relevant Coursework</h2>
+
+                            <div class="core">
+                                <h3>Core classes</h3>
+                                <p>Introduction to Computer Science, Data Structures, Algorithms, Programming Languages, 
+                                    Machine Structure and Assembly Language Programming, Computation Theory</p>
+                            </div>
+
+                            <div class="electives">
+                                <h3>Electives</h3>
+                                <p>Software Engineering, Web Development, Introduction to Security, Human Factors in Security and Privacy, How Systems Fail,
+                                    Data and Power: Deconstructing Surveillance, Simple Robotics</p>
+                            </div>
+                        </div>
+
+                        <div class="skills">
+                            <h2>Skills</h2>
+                            <div class="languages">
+                                <h3>Languages</h3>
+                                <p>C++, C, Java, Python, HTML, CSS, JavaScript, SQL, LateX</p>
+                            </div>
+
+                            <div class="tools">
+                                <h3>Technical Tools</h3>
+                                <p>GitHub, WordPress, MailChimp, VSCode, Linux, Figma</p>
+                            </div>
+                        </div>
+
+                        <div class="extra">
+                            <h2>Extracurriculars</h2>
+                            <div class="tufts">
+                                <h3>Tufts:</h3>
+                                <p>Women's Varsity Squash (Captain), Tufts Spikeball, Tufts Bikes</p>
+                            </div>
+
+                            <div class="bxsci">
+                                <h3>Bronx Science:</h3>
+                                <p>Cross Country, Indoor Track, Outdoor Track</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="Experience">
+            <div class="experience-text">
+                <h1>Experience</h1>
+            </div>
+
+            <div class="web">
+                <div class="web-logo">
+                    <img src="OCR-Logo-2.png" style="width:25%">
+                </div>
+
+                <div class="web-text">
+                    <h2>OneCity Rising</h2>
+                    <h3>Web Development Intern</h3>
+                    <h4>Summer 2023</h4>
+                    <p>▪ Designed and developed the OneCity Rising website in WordPress using
+                        HTML, CSS, and JavaScript</p>
+                    <p>▪ Key features include operating mailing list and donation button</p>
+                    <p>▪ Created a MailChimp account and designed email newsletters to drive
+                        awareness and donations</p>
+                </div>
+            </div>
+
+            <div class="ta">
+                <div class="ta-logo">
+                    <img src="TuftsCS.jpg" style="width:30%">
+                </div>
+
+                <div class="ta-text">
+                    <h2>Tufts University Department of Computer Science</h2>
+                    <h3>Teaching Assistant</h3>
+                    <h4>January 2022 - May 2024</h4>
+                    <p>▪ Lead and facilitate weekly labs of 30+ students, assisting students and
+                        reinforcing concepts and topics covered in class</p>
+                    <p>▪ Lead weekly office hours assisting students with debugging and explaining
+                        homework assignments, projects and class material</p>
+                    <p>▪ Grade and provide feedback on programming and coding assignments</p>
+                </div>
+            </div>
+
+            <div class="tekscape">
+                <div class="tekscape-logo">
+                    <img src="tekscape-logo" style="width:50%">
+                </div>
+
+                <div class="tekscape-text">
+                    <h2>Tekscape</h2>
+                    <h3>Field Technician Intern</h3>
+                    <h4>Summer 2023</h4>
+                    <p>▪ Assisted in managing, monitoring, and updating client computer networks</p>
+                    <p>▪ Traveled to client sites to install hardware, diagnose and resolve technical
+                        network issues</p>
+                    <p>▪ Authored and revised resource and training guides for technical solutions</p>
+                </div>
+            </div>
+
+            <div class="state-senate">
+                <div class="state-logo">
+                    <img src="maria-logo" style="width:110%">
+                </div>
+
+                <div class="state-text">
+                    <h2>Campaign to Elect Maria Danzilo, NY State Senate</h2>
+                    <h3>Technology Intern</h3>
+                    <h4>Summer 2022</h4>
+                    <p>▪ Managed a social polling app to engage voters and gain an understanding of
+                        community needs and public perception to drive campaign strategy</p>
+                    <p>▪ Leveraged automated analytics to assess campaign effectiveness and
+                        formulate social and political activities to identify additional voters and political
+                        endorsements</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="Projects">
+            <div class="projects-text">
+                <h1>Projects</h1>
+            </div>
+
+            <div class="nltm">
+                <div class="nltm-text">
+                    <h2>Naturalistic Threat Modeling Tool</h2>
+                    <h3>September 2023 - May 2024</h3>
+                    <p>▪ Collaborated with the Tufts Security and Privacy lab to develop a custom
+                        naturalistic threat modeling tool</p>
+                    <p>▪ Developed Python scripts to parse and analyze pytm’s threat library</p>
+                    <p>▪ Conducted unit testing on the DSL to ensure accuracy and reliability</p>
+                    <p>▪ Gained in-depth knowledge of the threat modeling concepts and practices</p>
+                </div>
+            </div>
+
+            <div class="halligan">
+                <div class="halligan-text">
+                    <h2>Halligan Helper</h2>
+                    <h3>Fall 2022</h3>
+                    <p>▪ Designed and created a website selling products to computer science students</p>
+                    <p>▪ Feature includes a product page with backend inventory tracking and dollar
+                        amounts</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="Resume">
+            <div class="resume-text">
+                <h1>Resume</h1>
+            </div>
+            <!-- <div class="resume-preview">
+                <iframe src="Caroline Chin - Resume.docx - Google Docs.pdf" width="100%" height="600px"></iframe>
+            </div>
+            <div class="download-button">
+                <a href="Caroline Chin - Resume.docx - Google Docs.pdf" target="_blank" download>Download My Resume</a>
+            </div> -->
+
+            <object data="Caroline Chin - Resume.docx - Google Docs.pdf" type="application/pdf" width="100%" height="500px"></object>
+        </section>
+    </body>
+    </html>
